@@ -3,10 +3,7 @@ name: Deploy Backend to Docker Hub
 on:
   push:
     branches: [ main ]
-    paths:
-      - 'todo-app/apps/backend/**'
-      - 'todo-app/packages/db/**'
-      - 'todo-app/docker/Dockerfile.backend'
+  workflow_dispatch:
 
 jobs: 
   build-and-push:

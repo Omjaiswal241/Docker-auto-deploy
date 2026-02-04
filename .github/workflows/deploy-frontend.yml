@@ -3,10 +3,7 @@ name: Deploy Frontend to Docker Hub
 on:
   push:
     branches: [ main ]
-    paths:
-      - 'todo-app/apps/web/**'
-      - 'todo-app/packages/**'
-      - 'todo-app/docker/Dockerfile.frontend'
+  workflow_dispatch:
 
 jobs: 
   build-and-push:

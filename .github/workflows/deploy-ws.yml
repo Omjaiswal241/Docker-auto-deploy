@@ -3,10 +3,7 @@ name: Deploy WebSocket to Docker Hub
 on:
   push:
     branches: [ main ]
-    paths:
-      - 'todo-app/apps/ws/**'
-      - 'todo-app/packages/db/**'
-      - 'todo-app/docker/Dockerfile.ws'
+  workflow_dispatch:
 
 jobs: 
   build-and-push:
