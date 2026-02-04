@@ -23,7 +23,11 @@ jobs:
         with:
           context: ./todo-app
           file: ./todo-app/docker/Dockerfile.frontend
+          build-args:
+            - DATABASE_URL=${{ secrets.DATABASE_URL }}   
           push: true
           tags: |
             omjaiswal241/todo-app-frontend:latest
             omjaiswal241/todo-app-frontend:${{ github.sha }}
+
+# ADD databse url in secret also
